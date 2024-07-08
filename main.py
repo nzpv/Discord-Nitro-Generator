@@ -1,4 +1,4 @@
-import ctypes.wintypes, random, ctypes, requests, os, string, pathlib, sys, time, subprocess
+import ctypes.wintypes, random, ctypes, requests, os, string, pathlib, sys
 from colorama import *
 from pystyle import *
 
