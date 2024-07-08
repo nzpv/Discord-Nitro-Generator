@@ -6,40 +6,7 @@ init()
 
 count = 0
 liste = ["1", "2", "3", "cls"]
-ctypes.windll.kernel32.SetConsoleTitleW(f"")
-
-PASTE_BIN_URL = "https://pastebin.com/"
-
-hardwareid = (
-    subprocess.check_output("wmic csproduct get uuid").decode().split("\n")[1].strip()
-)
-site = requests.get(PASTE_BIN_URL)
-
-try:
-    if hardwareid in site.text:
-        pass
-    else:
-        print(f"[!] > To buy this tool dm @sowqa on discord!")
-        print(f"[?] > Your HardwareID is " + hardwareid)
-        time.sleep(30)
-        input()
-        exit(123)
-except:
-    print(f"[!] > The connection to our database failed!")
-    input()
-    exit(123)
-
-LicenseKey = input(f"Enter your key licence > ")
-if LicenseKey == "atzne":
-    print(
-        f"{Fore.WHITE}[{Fore.GREEN}+{Fore.WHITE}] > {Fore.GREEN}Your key is valid!{Fore.BLUE}"
-    )
-    time.sleep(2)
-else:
-    print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] > {Fore.RED}Your key is invalid!")
-    print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] > {Fore.RED}Press enter to quit!")
-    input("")
-    exit(123)
+ctypes.windll.kernel32.SetConsoleTitleW(f"Discord Nitro Generator")
 
 os.system("cls")
 
